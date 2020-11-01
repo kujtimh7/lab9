@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 var animate = window.requestAnimationFrame ||
  	window.webkitRequestAnimationFrame ||
  	window.mozRequestAnimationFrame ||
@@ -96,14 +100,14 @@ if(this.y < 0 || this.y > 600) { // a point was scored
 	this.y = 300;
 }
 
-if(top_y > 300) {
+
 if(top_y < (paddle1.y + paddle1.height) && bottom_y > paddle1.y && top_x < (paddle1.x + paddle1.width) && bottom_x > paddle1.x) {
 			      // hit the player's paddle
 	this.y_speed = -3;
 	this.x_speed += (paddle1.x_speed / 2);
 	this.y += this.y_speed;
 			    }
-			  } else {
+			  
 if(top_y < (paddle2.y + paddle2.height) && bottom_y > paddle2.y && top_x < (paddle2.x + paddle2.width) && bottom_x > paddle2.x) {
 // hit the computer's paddle
 	this.y_speed = 3;
@@ -111,7 +115,7 @@ if(top_y < (paddle2.y + paddle2.height) && bottom_y > paddle2.y && top_x < (padd
 	this.y += this.y_speed;
 			    }
 			  }
-			};
+			
 			
 Player.prototype.update = function() {
 	for(var key in keysDown) {
